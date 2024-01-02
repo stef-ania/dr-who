@@ -26,4 +26,4 @@ This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-opti
 
 ## WIP
 
-This project is still working in progress.
+This project is still a work in progress.
