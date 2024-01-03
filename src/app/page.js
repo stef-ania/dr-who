@@ -5,6 +5,7 @@ import styles from './page.module.css';
 import Logo from './components/atoms/logo';
 import Input from './components/atoms/input';
 import Textarea from './components/atoms/textarea';
+import CarouselButton from './components/atoms/carouselButton';
 //import Button from './components/atoms/button';
 // import LogoCadena from './components/atoms/logoCadena';
 //import Icon from './components/atoms/icon';
@@ -21,6 +22,7 @@ export default function Home() {
           <Input type="submit" value="Enviar" />
           <p>Get started with Dr Who</p>
           <Textarea name="message" id="message" placeholder="Holi" maxLength="300" />
+          <CarouselButton></CarouselButton>
         </div>
       </main>
     </>
