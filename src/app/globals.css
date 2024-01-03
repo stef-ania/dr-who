@@ -4,7 +4,7 @@
 
   /* Font family: */
   --font-default: 'Montserrat', Helvetica, Arial, sans-serif;
-  --font-heading: 'Lato', Helvetica, Arial, sans-serif;
+  --font-heading-and-buttons: 'Lato', Helvetica, Arial, sans-serif;
 
   /* Font size: */
   --font-default-size: 2rem;
@@ -19,6 +19,7 @@
   --general-bg: #040521;
   --primary-color: #ffc67e;
   --secondary-color: #fff;
+  --tertiary-color: #000;
 }
 
 * {
@@ -40,8 +41,6 @@ body {
 
 a {
   color: inherit;
-  font-size: 2rem;
-  font-weight: var(--font-medium);
   text-decoration: none;
 }
 
@@ -87,7 +86,7 @@ em {
   font-style: italic;
 }
 
-@media only screen and (min-width: 1440px) {
+@media only screen and (min-width: 1120px) {
   h1 {
     font-size: 4rem;
     line-height: 4.925rem;
@@ -96,9 +95,5 @@ em {
   h2 {
     font-size: 6rem;
     line-height: 7.2rem;
-  }
-
-  a {
-    font-size: 1.25rem;
   }
 }
