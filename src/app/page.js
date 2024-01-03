@@ -1,8 +1,10 @@
 //import Image from 'next/image';
 'use client';
+
 import styles from './page.module.css';
 import Logo from './components/atoms/logo';
-import Button from './components/atoms/button';
+import Input from './components/atoms/input';
+//import Button from './components/atoms/button';
 // import LogoCadena from './components/atoms/logoCadena';
 //import Icon from './components/atoms/icon';
 
@@ -14,6 +16,8 @@ export default function Home() {
       </header>
       <main className={styles.main}>
         <div className={styles.description}>
+          <Input type="text" name="username" id="username" placeholder="Nombre de usuario" required />
+          <Input type="submit" value="Enviar" />
           <p>Get started with Dr Who</p>
         </div>
       </main>
