@@ -1,7 +1,8 @@
-import Image from 'next/image';
+//import Image from 'next/image';
 import styles from './page.module.css';
 import Logo from './components/atoms/logo';
 // import LogoCadena from './components/atoms/logoCadena';
+//import Icon from './components/atoms/icon';
 
 export default function Home() {
   return (
