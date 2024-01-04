@@ -45,6 +45,7 @@ const NavLink = styled.a`
   cursor: pointer;
   transition: all 300ms ease-in-out;
   text-decoration: none;
+  padding-bottom: 1rem;
 
   &:hover {
     text-decoration: underline;

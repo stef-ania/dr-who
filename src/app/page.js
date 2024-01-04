@@ -5,10 +5,7 @@ import styles from './page.module.css';
 import Logo from './components/atoms/logo';
 import Input from './components/atoms/input';
 import Textarea from './components/atoms/textarea';
-import PrimaryNav from './components/molecules/PrimaryNav';
-//import Button from './components/atoms/button';
-// import LogoCadena from './components/atoms/logoCadena';
-//import Icon from './components/atoms/icon';
+import SearchBar from './components/molecules/searchBar';
 
 export default function Home() {
   return (
@@ -23,6 +20,7 @@ export default function Home() {
           <p>Get started with Dr Who</p>
           <Textarea name="message" id="message" placeholder="Holi" maxLength="300" />
         </div>
+        <SearchBar></SearchBar>
       </main>
     </>
   );
