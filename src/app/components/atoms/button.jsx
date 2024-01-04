@@ -7,7 +7,7 @@ const Button = styled.a`
   border-radius: var(--border-radius);
   font-family: var(--font-heading-and-buttons);
   line-height: normal;
-  margin: 0 1rem;
+  margin: 0;
   font-size: ${(props) => (props.$medium ? '1.6rem' : '2rem')};
   padding: ${(props) => (props.$medium ? '1rem 4.5rem' : '1rem 3rem')};
   cursor: pointer;
