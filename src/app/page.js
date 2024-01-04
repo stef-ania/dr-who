@@ -5,7 +5,7 @@ import styles from './page.module.css';
 import Logo from './components/atoms/logo';
 import Input from './components/atoms/input';
 import Textarea from './components/atoms/textarea';
-import CarouselButton from './components/atoms/carouselButton';
+import PrimaryNav from './components/molecules/PrimaryNav';
 //import Button from './components/atoms/button';
 // import LogoCadena from './components/atoms/logoCadena';
 //import Icon from './components/atoms/icon';
