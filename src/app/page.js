@@ -5,8 +5,7 @@ import styles from './page.module.css';
 import Logo from './components/atoms/logo';
 import Input from './components/atoms/input';
 import Textarea from './components/atoms/textarea';
-import SocialLinks from './components/molecules/socialLinks';
-import Card from './components/molecules/card';
+import Form from './components/molecules/form';
 
 export default function Home() {
   return (
@@ -16,13 +15,9 @@ export default function Home() {
       </header>
       <main className={styles.main}>
         <div className={styles.description}>
-          <Input type="text" name="username" id="username" placeholder="Nombre de usuario" required />
-          <Input type="submit" value="Enviar" />
           <p>Get started with Dr Who</p>
-          <Textarea name="message" id="message" placeholder="Holi" maxLength="300" />
         </div>
-        <SocialLinks />
-        <Card></Card>
+        <Form></Form>
       </main>
     </>
   );

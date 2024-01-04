@@ -8,6 +8,7 @@ const Input = styled.input`
   font-size: var(--font-default-size);
   font-family: var(--font-heading-and-buttons);
   opacity: 1;
+  max-width: 100vw;
 
   &:focus {
     outline-offset: -1px;
@@ -37,7 +38,7 @@ const Input = styled.input`
     border-radius: var(--border-radius);
     font-family: var(--font-heading-and-buttons);
     line-height: normal;
-    margin: 0 1rem;
+    margin: 0;
     padding: 0.75rem 6.8rem;
     transition: all 300ms ease-in-out;
     border: none;
@@ -76,6 +77,7 @@ const Input = styled.input`
 
   @media (min-width: 1120px) {
     padding: 0.75rem 2.85rem;
+    width: auto;
   }
 
   &[type='search'] {
