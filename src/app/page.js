@@ -22,7 +22,6 @@ export default function Home() {
           <Input type="submit" value="Enviar" />
           <p>Get started with Dr Who</p>
           <Textarea name="message" id="message" placeholder="Holi" maxLength="300" />
-          <CarouselButton></CarouselButton>
         </div>
       </main>
     </>
