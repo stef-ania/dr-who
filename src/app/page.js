@@ -6,6 +6,7 @@ import Logo from './components/atoms/logo';
 import Input from './components/atoms/input';
 import Textarea from './components/atoms/textarea';
 import SocialLinks from './components/molecules/socialLinks';
+import Card from './components/molecules/card';
 
 export default function Home() {
   return (
@@ -21,6 +22,7 @@ export default function Home() {
           <Textarea name="message" id="message" placeholder="Holi" maxLength="300" />
         </div>
         <SocialLinks />
+        <Card></Card>
       </main>
     </>
   );
