@@ -6,6 +6,7 @@ import PrimaryNav from '../molecules/PrimaryNav';
 import SearchBar from '../molecules/searchBar';
 import SocialLinks from '../molecules/socialLinks';
 import Link from 'next/link';
+import { useState } from 'react';
 
 const HeaderContainer = styled.header`
   background-color: var(--general-bg);
@@ -26,6 +27,14 @@ const MaxWidthContainer = styled.div`
     min-height: 186px;
   }
 `;
+
+/*
+const isActiveWrap = styled.div`
+  display: ${(props) => (props.$isActive ? 'flex' : 'none')};
+  margin: 0;
+  padding: 0;
+`;
+*/
 
 // Toggle Menu button
 const ToggleMenu = styled.button`
@@ -85,17 +94,25 @@ const Header = () => {
     { id: 3, link: '/contact', text: 'Contacto' },
   ];
 
+  // Estado para controlar la visibilidad de los elementos en dispositivos móviles
+  const [clicked, setclicked] = useState(false);
+
+  // Función para manejar el clic en el botón de menú
+  const handleToggleMenu = () => {
+    setclicked(!clicked);
+  };
+
   return (
     <HeaderContainer>
       <MaxWidthContainer>
-        <PrimaryNav links={navLinks} />
+        <PrimaryNav links={navLinks} className={`links ${clicked ? 'active' : ''}`} />
 
         <LogoAndToggleWrap>
           <Link href="/">
             <Logo width={190} height={195} alt="Doctor Who logo"></Logo>
           </Link>
 
-          <ToggleMenu type="button">
+          <ToggleMenu cliked={clicked} type="button" onClick={handleToggleMenu}>
             <Icon name="hamburguer-menu" width={58} height={58} />
           </ToggleMenu>
         </LogoAndToggleWrap>
