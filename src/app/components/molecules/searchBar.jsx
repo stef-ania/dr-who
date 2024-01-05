@@ -14,9 +14,14 @@ const IconButton = styled.button`
   background-color: transparent;
   border: none;
   cursor: pointer;
-  height: 2.5rem;
-  width: 2.5rem;
+  height: 53px;
+  width: 53px;
   padding-bottom: 1rem;
+
+  @media screen and (min-width: 1120px) {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
 `;
 
 const SearchInput = styled.input`
@@ -32,6 +37,10 @@ const SearchInput = styled.input`
     cursor: pointer;
     background-color: transparent;
     padding-bottom: 1rem;
+    text-align: left;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
   }
 
   &[type='search']:hover {
@@ -53,6 +62,16 @@ const SearchInput = styled.input`
       font-size: 1.25rem;
       text-align: left;
     }
+  }
+`;
+
+const StyledIcon = styled(Icon)`
+  width: 53px;
+  height: 53px;
+
+  @media screen and (min-width: 1120px) {
+    width: 100%;
+    height: 100%;
   }
 `;
 
@@ -89,7 +108,7 @@ const SearchBar = () => {
   return (
     <SearchContainer>
       <IconButton type="button" onClick={handleSearch}>
-        <Icon name="search" width={24} height={24} />
+        <StyledIcon name="search" width={24} height={24} />
       </IconButton>
       <SearchInput
         type="search"

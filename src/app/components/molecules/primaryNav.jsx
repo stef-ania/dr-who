@@ -6,9 +6,11 @@ const PrimaryNavContainer = styled.nav`
   flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
+  width: 100%;
 
   @media (min-width: 1120px) {
     flex-direction: row;
+    width: auto;
   }
 `;
 

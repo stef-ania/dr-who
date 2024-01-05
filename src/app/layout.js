@@ -1,6 +1,7 @@
 import { Lato, Montserrat } from 'next/font/google';
 import './globals.css';
 import StyledComponentsRegistry from './registry';
+import Header from './components/organisms/header';
 
 export const montserrat = Montserrat({
   subsets: ['latin'],
@@ -22,7 +23,10 @@ export default function RootLayout({ children }) {
   return (
     <html lang="es">
       <StyledComponentsRegistry>
-        <body className={montserrat.className}>{children}</body>
+        <body className={montserrat.className}>
+          <Header></Header>
+          {children}
+        </body>
       </StyledComponentsRegistry>
     </html>
   );
