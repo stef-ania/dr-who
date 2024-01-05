@@ -124,7 +124,7 @@ const SearchBar = () => {
       <ul>
         {searchResults.map((result) => (
           <li key={result.id}>
-            {/* Por el momento no está funcionando: <Image src={result.image} alt={result.doctor} width={314} height={420} /> */}
+            {/*<Image src={result.image} alt={result.doctor} width={314} height={420} />*/}
             <div>
               <p>{result.doctor}</p>
               <p>{result.actor}</p>

@@ -3,6 +3,7 @@ import Image from 'next/image';
 import styled from 'styled-components';
 import Button from '../atoms/Button';
 import CarouselButton from '../atoms/carouselButton';
+import Link from 'next/link';
 
 const images = ['/assets/img/carrusel/carrusel-1.webp', '/assets/img/carrusel/carrusel-2.jpg'];
 

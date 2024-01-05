@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import styled from 'styled-components';
 import Button from '../atoms/button';
+// Añadir Link from Next para añadir el enlace
 
 const CardContainer = styled.div`
   display: flex;
@@ -9,13 +10,13 @@ const CardContainer = styled.div`
   align-items: flex-start;
 `;
 
-const Card = ({ imageSrc, title, subtitle, paragraph }) => {
+const Card = ({ imageSrc, doctor, actor, screen_time }) => {
   return (
     <CardContainer>
-      <Image src={imageSrc} width={314} height={459} alt={title} sizes="(max-width: 480px) 100%" />
-      <h3>{title}</h3>
-      <em>{subtitle}</em>
-      <p>{paragraph}</p>
+      <Image src={imageSrc} width={314} height={459} alt={doctor} sizes="(max-width: 480px) 100%" />
+      <h3>{doctor}</h3>
+      <em>{actor}</em>
+      <p>{screen_time}</p>
       <Button $medium>Ver más</Button>
     </CardContainer>
   );
