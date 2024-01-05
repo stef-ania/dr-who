@@ -63,9 +63,9 @@ const PrimaryNav = ({ links }) => {
   return (
     <PrimaryNavContainer>
       <NavList>
-        {links.map((link, index) => (
-          <NavItem key={index.id}>
-            <NavLink href={link.href}>{link.text}</NavLink>
+        {links.map((linkItem) => (
+          <NavItem key={linkItem.id}>
+            <NavLink href={linkItem.link}>{linkItem.text}</NavLink>
           </NavItem>
         ))}
       </NavList>
