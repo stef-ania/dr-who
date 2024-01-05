@@ -2,6 +2,7 @@
 'use client';
 
 import styles from './page.module.css';
+import Carousel from './components/organisms/carousel';
 
 export default function Home() {
   return (
@@ -10,6 +11,7 @@ export default function Home() {
         <div className={styles.description}>
           <p>Get started with Dr Who</p>
         </div>
+        <Carousel></Carousel>
       </main>
     </>
   );

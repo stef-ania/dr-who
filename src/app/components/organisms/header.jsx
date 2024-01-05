@@ -11,6 +11,7 @@ import { useState } from 'react';
 const HeaderContainer = styled.header`
   background-color: var(--general-bg);
   position: relative;
+  z-index: 2;
 `;
 
 const MaxWidthContainer = styled.div`
@@ -25,6 +26,7 @@ const MaxWidthContainer = styled.div`
     flex-direction: row;
     align-items: center;
     min-height: 186px;
+    padding: 1rem;
   }
 `;
 

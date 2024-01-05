@@ -13,6 +13,10 @@ const Button = styled.a`
   cursor: pointer;
   transition: all 300ms ease-in-out;
   border: none;
+  width: auto;
+  max-width: 100%;
+  display: block;
+  margin: 0 auto;
 
   &:hover {
     text-decoration: underline;
@@ -21,6 +25,10 @@ const Button = styled.a`
 
   @media (min-width: 1120px) {
     padding: ${(props) => (props.$medium ? '1rem 2.5rem' : '1.4375rem 4.54319rem 1.4375rem 4.20031rem')};
+    width: auto;
+    max-width: 100%;
+    display: block;
+    margin: 0 auto;
   }
 `;
 
