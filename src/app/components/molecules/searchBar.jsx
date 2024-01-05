@@ -5,9 +5,15 @@ import Icon from '../atoms/icon';
 
 const SearchContainer = styled.div`
   display: flex;
-  gap: 1rem;
+  gap: 0.5rem;
   align-items: center;
   justify-content: space-between;
+  max-width: 230px;
+
+  @media screen and (min-width: 1120px) {
+    max-width: auto;
+    gap: 1rem;
+  }
 `;
 
 const IconButton = styled.button`
@@ -66,12 +72,9 @@ const SearchInput = styled.input`
 `;
 
 const StyledIcon = styled(Icon)`
-  width: 53px;
-  height: 53px;
-
   @media screen and (min-width: 1120px) {
-    width: 100%;
-    height: 100%;
+    width: 1.5rem;
+    height: 1.5rem;
   }
 `;
 
@@ -108,7 +111,7 @@ const SearchBar = () => {
   return (
     <SearchContainer>
       <IconButton type="button" onClick={handleSearch}>
-        <StyledIcon name="search" width={24} height={24} />
+        <StyledIcon name="search" width={53} height={53} />
       </IconButton>
       <SearchInput
         type="search"

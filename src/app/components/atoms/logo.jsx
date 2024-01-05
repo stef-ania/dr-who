@@ -3,11 +3,14 @@ import Image from 'next/image';
 
 const StyledLogo = styled(Image)`
   max-width: 5.851rem;
-  max-height: 5.99494rem;
+  height: 5.99494rem;
 
   @media screen and (min-width: 1120px) {
     max-width: 100%;
-    max-height: 100%;
+    height: 100%;
+    display: block;
+    margin: 0 auto;
+    //position: absolute;
   }
 `;
 

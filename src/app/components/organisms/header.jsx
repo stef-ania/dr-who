@@ -5,38 +5,107 @@ import Icon from '../atoms/icon';
 import PrimaryNav from '../molecules/PrimaryNav';
 import SearchBar from '../molecules/searchBar';
 import SocialLinks from '../molecules/socialLinks';
+import Link from 'next/link';
 
 const HeaderContainer = styled.header`
-  display: flex;
-  gap: 2rem;
-  flex-direction: column;
-  align-items: flex-start;
+  background-color: var(--general-bg);
+  position: relative;
 `;
 
+const MaxWidthContainer = styled.div`
+  margin: 0 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @media screen and (min-width: 1120px) {
+    margin: 0 auto;
+    max-width: var(--max-width);
+    flex-direction: row;
+    align-items: center;
+    min-height: 186px;
+  }
+`;
+
+// Toggle Menu button
 const ToggleMenu = styled.button`
   background-color: transparent;
   border: none;
   cursor: pointer;
   height: 58px;
   width: 58px;
+
+  @media screen and (min-width: 1120px) {
+    display: none;
+  }
 `;
 
+/* Logo and Toggle group */
+const LogoAndToggleWrap = styled.div`
+  display: flex;
+  justify-content: space-between;
+  order: -1;
+  width: 100%;
+  align-items: center;
+  margin-top: 1rem;
+  position: static;
+
+  @media screen and (min-width: 1120px) {
+    order: 0;
+    justify-content: center;
+    margin-top: 0.5rem;
+    position: absolute;
+    top: 2%;
+    left: 0vw;
+  }
+`;
+
+/* Search bar and Social links group */
+const SearchAndSocialWrap = styled.div`
+  display: flex;
+  width: 100%;
+  align-items: center;
+  flex-direction: column;
+  gap: 4rem;
+  margin-bottom: 2rem;
+
+  @media screen and (min-width: 1120px) {
+    flex-direction: row;
+    gap: 4rem;
+    justify-content: flex-end;
+    z-index: 1;
+  }
+`;
+
+// Nav links:
 const Header = () => {
   const navLinks = [
-    { id: 1, link: '/conoce-a', text: 'Conoce a' },
-    { id: 2, link: '/doctores', text: 'Doctores' },
-    { id: 3, link: '/contacto', text: 'Contacto' },
+    { id: 1, link: '/discover', text: 'Conoce a' },
+    { id: 2, link: '/doctors', text: 'Doctores' },
+    { id: 3, link: '/contact', text: 'Contacto' },
   ];
 
   return (
     <HeaderContainer>
-      <PrimaryNav links={navLinks} />
-      <ToggleMenu type="button">
-        <Icon name="hamburguer-menu" width={58} height={58} />
-      </ToggleMenu>
-      <Logo width={190} height={195} alt="Doctor Who logo"></Logo>
-      <SearchBar></SearchBar>
-      <SocialLinks></SocialLinks>
+      <MaxWidthContainer>
+        <PrimaryNav links={navLinks} />
+
+        <LogoAndToggleWrap>
+          <Link href="/">
+            <Logo width={190} height={195} alt="Doctor Who logo"></Logo>
+          </Link>
+
+          <ToggleMenu type="button">
+            <Icon name="hamburguer-menu" width={58} height={58} />
+          </ToggleMenu>
+        </LogoAndToggleWrap>
+
+        <SearchAndSocialWrap>
+          <SearchBar></SearchBar>
+
+          <SocialLinks></SocialLinks>
+        </SearchAndSocialWrap>
+      </MaxWidthContainer>
     </HeaderContainer>
   );
 };

@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import Link from 'next/link';
 
 const PrimaryNavContainer = styled.nav`
   padding: 1rem;
@@ -10,7 +11,8 @@ const PrimaryNavContainer = styled.nav`
 
   @media (min-width: 1120px) {
     flex-direction: row;
-    width: auto;
+    justify-content: flex-start;
+    z-index: 1;
   }
 `;
 
