@@ -1,14 +1,12 @@
 import React, { useState } from 'react';
-import Image from 'next/image';
 import styled from 'styled-components';
 import Button from '../atoms/Button';
 import CarouselButton from '../atoms/carouselButton';
-import Link from 'next/link';
 
-const images = ['/assets/img/carrusel/carrusel-1.webp', '/assets/img/carrusel/carrusel-2.jpg'];
+// Listado imágenes
+const images = ['/assets/img/carrusel/carrusel-1.jpg', '/assets/img/carrusel/carrusel-2.jpg'];
 
 const CarouselContainer = styled.div`
-  width: 100vw;
   overflow: hidden;
   position: relative;
 `;
@@ -26,10 +24,14 @@ const MaxWidthContainer = styled.div`
 const CarouselButtonsWrap = styled.div`
   position: absolute;
   bottom: 4rem;
-  right: 4rem;
-  transform: translateX(-50%);
+  right: 40rem;
   display: flex;
   gap: 1rem;
+
+  @media screen and (min-width: 1120px) {
+    right: 4rem;
+    transform: translateX(-50%);
+  }
 
   @media (min-width: 1440px) {
     right: 6rem;
@@ -39,18 +41,32 @@ const CarouselButtonsWrap = styled.div`
 const TextWrap = styled.div`
   position: absolute;
   top: 50%;
-  left: 24%;
-  transform: translateX(-50%);
+  left: 39%;
   display: flex;
   gap: 2rem;
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
+
+  @media screen and (min-width: 1120px) {
+    left: 8%;
+  }
 `;
 
 const ButtonContainer = styled.div`
   display: flex;
   gap: 2rem;
+`;
+
+const ImageResponsiveCrop = styled.img`
+  object-fit: cover;
+  max-height: 860px;
+
+  @media (min-width: 1120px) {
+    object-fit: fill;
+    width: 100vw;
+    max-height: 1080px;
+  }
 `;
 
 const Carousel = () => {
@@ -62,16 +78,7 @@ const Carousel = () => {
 
   return (
     <CarouselContainer>
-      <Image
-        src={images[activeIndex]}
-        width={1726}
-        height={865}
-        alt={`Image ${activeIndex + 1}`}
-        style={{
-          display: 'block',
-          margin: '0 auto',
-        }}
-      />
+      <ImageResponsiveCrop src={images[activeIndex]} alt={`Image ${activeIndex + 1}`} />
 
       <MaxWidthContainer>
         <CarouselButtonsWrap>
@@ -81,10 +88,12 @@ const Carousel = () => {
         </CarouselButtonsWrap>
 
         <TextWrap>
-          <h2>The Giggle {activeIndex + 1} </h2>
+          {activeIndex === 1 ? <h2>Allons-y</h2> : <h2>The Giggle {activeIndex + 1}</h2>}
 
           <ButtonContainer>
-            <Button onClick={() => console.log('Button clicked')}>Ver ahora</Button>
+            <Button onClick={() => console.log('Button clicked')} href="https://www.doctorwho.tv/" target="_blank">
+              Ver ahora
+            </Button>
           </ButtonContainer>
         </TextWrap>
       </MaxWidthContainer>
