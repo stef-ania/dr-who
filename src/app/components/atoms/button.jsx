@@ -17,6 +17,7 @@ const Button = styled.a`
   max-width: 100%;
   display: block;
   margin: 0 auto;
+  text-align: center;
 
   &:hover {
     text-decoration: underline;
