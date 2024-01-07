@@ -17,7 +17,7 @@ export const lato = Lato({
 export const metadata = {
   title: 'Doctor Who | Home',
   description:
-    'Discover the Doctor Who series from BBC. Dive into the world of its characters, catch up on the latest Doctor Who updates, and explore engaging games. Experience Doctor Who through its past, present, and upcoming adventures',
+    'Descubre la serie Doctor Who de la BBC. Sumérgete en el mundo de sus personajes, ponte al día con las últimas actualizaciones de Doctor Who y explora juegos atractivos. Experimenta Doctor Who a través de sus aventuras pasadas, presentes y futuras.',
 };
 
 export default function RootLayout({ children }) {

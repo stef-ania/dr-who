@@ -1,10 +1,10 @@
-# dr-who
+# 🩺 dr-who
 
 Web Layout Project for the Doctor Who Series in Spanish 🌐👩‍💻 Undertaken as an exercise to learn and apply React.js and Next.js, this project focuses on creating the website for the iconic Doctor Who series in Spanish. The goal is to master the use of React.js and Next.js technologies while developing a scalable and efficient web layout.
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## Getting Started
+## 📌 Getting Started
 
 First, run the development server:
 
@@ -20,10 +20,51 @@ bun dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+### 🌈 Technologies Used
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+- HTML
+- CSS
+- React.js
+- Next.js
+- Styled-components
 
-## WIP
+This project is made with functional components, using Next.js for routing, and it uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load custom Google Fonts.
 
-This project is still a work in progress.
+## Imágenes del proyecto
+
+### Homepage Mobile
+
+![Vista previa del proyecto](/public/assets/img/readme_imgs/Home-mobile.jpg)
+
+### Homepage Desktop
+
+![Vista previa del proyecto](/public/assets/img/readme_imgs/Home-desktop.jpg)
+
+### 💿 Repository Installation
+
+1. Clone this repository.
+
+```
+
+git clone https://github.com/stef-ania/dr-who
+
+```
+
+### 🎉 Contribute to this project
+
+1. Fork the repository.
+
+2. Clone your fork locally.
+
+```
+
+git clone https://github.com/tuusuario/dr-who.git
+
+```
+
+3. Create a branch for your contributions.
+4. Make your changes and add some tests!
+
+### Testing: still work in progress
+
+Testing is very important. Soon they will be added to this project.
