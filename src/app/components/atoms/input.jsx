@@ -8,7 +8,7 @@ const Input = styled.input`
   font-size: var(--font-default-size);
   font-family: var(--font-heading-and-buttons);
   opacity: 1;
-  max-width: 100vw;
+  max-width: 100%;
 
   &:focus {
     outline-offset: -1px;
