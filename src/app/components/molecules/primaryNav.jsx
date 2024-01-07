@@ -13,6 +13,7 @@ const PrimaryNavContainer = styled.nav`
     flex-direction: row;
     justify-content: flex-start;
     z-index: 1;
+    padding: 1rem 0;
   }
 `;
 
@@ -28,6 +29,7 @@ const NavList = styled.ul`
 
   @media (min-width: 1120px) {
     flex-direction: row;
+    gap: 3rem;
   }
 `;
 
@@ -35,7 +37,7 @@ const NavItem = styled.li`
   margin: 1rem 0;
 
   @media (min-width: 1120px) {
-    margin: 0 0.5rem;
+    margin: 0;
   }
 `;
 
