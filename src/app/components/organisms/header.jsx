@@ -9,6 +9,7 @@ import Link from 'next/link';
 import { useState } from 'react';
 
 const HeaderContainer = styled.header`
+  display: none;
   background-color: var(--general-bg);
   position: fixed;
   z-index: 2;
@@ -16,6 +17,7 @@ const HeaderContainer = styled.header`
 
   @media screen and (min-width: 1120px) {
     position: relative;
+    display: initial;
   }
 `;
 
