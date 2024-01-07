@@ -10,8 +10,10 @@ import { useState } from 'react';
 
 const HeaderContainer = styled.header`
   background-color: var(--general-bg);
-  position: relative;
+  //position: relative;
+  position: fixed;
   z-index: 2;
+  width: 100vw;
 `;
 
 const MaxWidthContainer = styled.div`
@@ -19,24 +21,17 @@ const MaxWidthContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  position: relative;
 
   @media screen and (min-width: 1120px) {
     margin: 0 auto;
     max-width: var(--max-width);
     flex-direction: row;
     align-items: center;
-    min-height: 186px;
+    min-height: 168px;
     padding: 1rem;
   }
 `;
-
-/*
-const isActiveWrap = styled.div`
-  display: ${(props) => (props.$isActive ? 'flex' : 'none')};
-  margin: 0;
-  padding: 0;
-`;
-*/
 
 // Toggle Menu button
 const ToggleMenu = styled.button`
@@ -85,6 +80,7 @@ const SearchAndSocialWrap = styled.div`
     gap: 4rem;
     justify-content: flex-end;
     z-index: 1;
+    margin-bottom: 0rem;
   }
 `;
 
