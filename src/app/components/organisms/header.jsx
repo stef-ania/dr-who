@@ -90,6 +90,24 @@ const SearchAndSocialWrap = styled.div`
   }
 `;
 
+const PrimaryNavDesktopWrap = styled.div`
+  display: none;
+  margin: 0;
+  padding: 0;
+  @media screen and (min-width: 1120px) {
+    display: block;
+    z-index: 1;
+    width: 100%;
+  }
+`;
+
+const PrimaryNavMobileWrap = styled.div`
+  display: block;
+  @media screen and (min-width: 1120px) {
+    display: none;
+  }
+`;
+
 // Nav links:
 const Header = () => {
   const navLinks = [
@@ -109,7 +127,10 @@ const Header = () => {
   return (
     <HeaderContainer>
       <MaxWidthContainer>
-        <PrimaryNav links={navLinks} className={`links ${clicked ? 'active' : ''}`} />
+        <PrimaryNavDesktopWrap>
+          {' '}
+          <PrimaryNav links={navLinks} />
+        </PrimaryNavDesktopWrap>
 
         <LogoAndToggleWrap>
           <Link href="/">
@@ -121,11 +142,18 @@ const Header = () => {
           </ToggleMenu>
         </LogoAndToggleWrap>
 
-        <SearchAndSocialWrap>
-          <SearchBar></SearchBar>
+        {(clicked || window.innerWidth >= 1120) && (
+          <>
+            <PrimaryNavMobileWrap>
+              <PrimaryNav links={navLinks} className={`links ${clicked ? 'active' : ''}`} />
+            </PrimaryNavMobileWrap>
+            <SearchAndSocialWrap>
+              <SearchBar></SearchBar>
 
-          <SocialLinks></SocialLinks>
-        </SearchAndSocialWrap>
+              <SocialLinks></SocialLinks>
+            </SearchAndSocialWrap>
+          </>
+        )}
       </MaxWidthContainer>
     </HeaderContainer>
   );
