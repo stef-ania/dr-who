@@ -11,6 +11,34 @@ const MainContainer = styled.main`
   min-height: 100vh;
 `;
 
+const DecorativeOrnamentOne = styled.img`
+  position: absolute;
+  top: 30%;
+  left: -30%;
+  z-index: -1;
+  max-width: 359px;
+
+  @media screen and (min-width: 1120px) {
+    top: 55%;
+    left: 8%;
+    max-width: 417px;
+  }
+`;
+
+const DecorativeOrnamentTwo = styled.img`
+  position: absolute;
+  top: 10%;
+  right: -30%;
+  z-index: -1;
+  max-width: 407px;
+
+  @media screen and (min-width: 1120px) {
+    top: 0;
+    right: 28%;
+    max-width: 641px;
+  }
+`;
+
 const GridContainer = styled.div`
   display: grid;
   grid-template-columns: 1fr;
@@ -87,6 +115,8 @@ const ImageContainer = styled.div`
 const DiscoverPage = () => {
   return (
     <MainContainer>
+      <DecorativeOrnamentOne src="/assets/img/svg/persistencia-2.svg" alt="Ornament"></DecorativeOrnamentOne>
+      <DecorativeOrnamentTwo src="/assets/img/svg/resistencia.svg" alt="Ornament"></DecorativeOrnamentTwo>
       <GridContainer>
         <Heading>Conoce a ... decimotercera doctor</Heading>
         <Paragraph>

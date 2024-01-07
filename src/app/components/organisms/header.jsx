@@ -10,7 +10,6 @@ import { useState } from 'react';
 
 const HeaderContainer = styled.header`
   background-color: var(--general-bg);
-  //position: relative;
   position: fixed;
   z-index: 2;
   width: 100vw;
