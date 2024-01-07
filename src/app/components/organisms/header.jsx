@@ -14,6 +14,10 @@ const HeaderContainer = styled.header`
   position: fixed;
   z-index: 2;
   width: 100vw;
+
+  @media screen and (min-width: 1120px) {
+    position: relative;
+  }
 `;
 
 const MaxWidthContainer = styled.div`
