@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
 import styled from 'styled-components';
 import Icon from '../atoms/icon';
+import Link from 'next/link';
 
 const SearchContainer = styled.div`
   display: flex;
@@ -78,7 +79,7 @@ const StyledIcon = styled(Icon)`
   }
 `;
 
-const SearchBar = () => {
+const SearchBar = ({ setSearchResults }) => {
   const [doctorsData, setDoctorsData] = useState(null);
 
   useEffect(() => {
@@ -96,7 +97,6 @@ const SearchBar = () => {
   }, []);
 
   const [searchTerm, setSearchTerm] = useState('');
-  const [searchResults, setSearchResults] = useState([]);
 
   const handleSearch = () => {
     const results = doctorsData.doctors.filter(
@@ -110,28 +110,17 @@ const SearchBar = () => {
 
   return (
     <SearchContainer>
-      <IconButton type="button" onClick={handleSearch}>
-        <StyledIcon name="search" width={53} height={53} />
-      </IconButton>
+      <Link href="/searchResults">
+        <IconButton type="button" onClick={handleSearch}>
+          <StyledIcon name="search" width={53} height={53} />
+        </IconButton>
+      </Link>
       <SearchInput
         type="search"
         placeholder="Buscar"
         value={searchTerm}
         onChange={(e) => setSearchTerm(e.target.value)}
       />
-
-      {/* Mostramos el resultado de la búsqueda */}
-      <ul>
-        {searchResults.map((result) => (
-          <li key={result.id}>
-            {/*<Image src={result.image} alt={result.doctor} width={314} height={420} />*/}
-            <div>
-              <p>{result.doctor}</p>
-              <p>{result.actor}</p>
-            </div>
-          </li>
-        ))}
-      </ul>
     </SearchContainer>
   );
 };
