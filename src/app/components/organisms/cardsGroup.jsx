@@ -1,5 +1,6 @@
 import Card from '../molecules/card.jsx';
 import doctorsList from '../../../../public/data/doctors.json';
+import styled from 'styled-components';
 
 const CardsGroup = () => {
   let doctorsArray = doctorsList;
