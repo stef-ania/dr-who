@@ -1,11 +1,11 @@
 import Card from '../molecules/card.jsx';
 import doctorsList from '../../../../public/data/doctors.json';
 
-export default function CardsGroup() {
-  let cardArr = doctorsList;
+const CardsGroup = () => {
+  let doctorsArray = doctorsList;
   return (
     <div>
-      {cardArr.doctors.map((eachCard, id) => (
+      {doctorsArray.doctors.map((eachCard, id) => (
         <div key={eachCard.id}>
           <Card
             imageSrc={eachCard.image}
@@ -17,4 +17,6 @@ export default function CardsGroup() {
       ))}
     </div>
   );
-}
+};
+
+export default CardsGroup;
