@@ -6,6 +6,7 @@ import SocialLinks from '../molecules/socialLinks';
 
 const FooterContainer = styled.footer`
   background-color: var(--general-bg);
+  border-top: 1px solid var(--secondary-color);
 `;
 
 const FooterMaxWidthContainer = styled.div`

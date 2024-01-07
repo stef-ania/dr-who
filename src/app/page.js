@@ -10,6 +10,7 @@ const Main = styled.main`
   justify-content: space-between;
   min-height: 100vh;
   padding: 0rem;
+  max-height: 1080px;
 `;
 
 export default function Home() {

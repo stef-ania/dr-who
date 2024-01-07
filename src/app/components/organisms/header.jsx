@@ -85,6 +85,7 @@ const SearchAndSocialWrap = styled.div`
     justify-content: flex-end;
     z-index: 1;
     margin-bottom: 0rem;
+    margin-right: 1rem;
   }
 `;
 

@@ -29,12 +29,7 @@ const CarouselButtonsWrap = styled.div`
   gap: 1rem;
 
   @media screen and (min-width: 1120px) {
-    right: 4rem;
-    transform: translateX(-50%);
-  }
-
-  @media (min-width: 1440px) {
-    right: 6rem;
+    right: 16rem;
   }
 `;
 
@@ -49,7 +44,7 @@ const TextWrap = styled.div`
   align-items: flex-start;
 
   @media screen and (min-width: 1120px) {
-    left: 8%;
+    left: 12rem;
   }
 `;
 
